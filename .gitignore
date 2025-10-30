@@ -1,0 +1,23 @@
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# java
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# gradle
+.gradle/
+build/
+out/
+classes/
+
+# fabric
+run/
+
+# macOS
+*.DS_Store

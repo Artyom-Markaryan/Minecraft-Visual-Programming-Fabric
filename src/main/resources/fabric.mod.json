@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "minecraft-visual-programming-fabric",
+	"version": "${version}",
+	"name": "Minecraft Visual Programming Fabric",
+	"description": "Adds visual programming language to Minecraft",
+	"authors": [
+		"Artyom-Markaryan"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Artyom-Markaryan/Minecraft-Visual-Programming-Fabric"
+	},
+	"license": "MIT",
+	"icon": "assets/minecraft-visual-programming-fabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"artyom.mvpf.MinecraftVisualProgrammingFabric"
+		],
+		"fabric-datagen": [
+			"artyom.mvpf.MinecraftVisualProgrammingFabricDataGenerator"
+		],
+        "client": [
+            "artyom.mvpf.MinecraftVisualProgrammingFabricClient"
+        ]
+	},
+	"mixins": [
+		"minecraft-visual-programming-fabric.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
