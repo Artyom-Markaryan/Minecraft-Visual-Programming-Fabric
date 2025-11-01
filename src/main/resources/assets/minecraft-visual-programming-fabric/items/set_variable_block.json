@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "minecraft-visual-programming-fabric:block/set_variable_block"
+  }
+}
