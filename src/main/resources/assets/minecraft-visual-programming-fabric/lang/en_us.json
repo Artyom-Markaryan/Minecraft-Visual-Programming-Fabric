@@ -1,4 +1,5 @@
 {
     "item.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
-    "block.minecraft-visual-programming-fabric.set_variable_block": "Set Variable"
+    "block.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
+    "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Set Variable"
 }

@@ -1,8 +1,8 @@
 package artyom.mvpf;
 
 import artyom.mvpf.block.ModBlocks;
+import artyom.mvpf.block.entity.ModBlockEntities;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +20,6 @@ public class MinecraftVisualProgrammingFabric implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("Initializing " + MOD_ID);
         ModBlocks.registerModBlocks();
+        ModBlockEntities.registerModBlockEntities();
 	}
 }

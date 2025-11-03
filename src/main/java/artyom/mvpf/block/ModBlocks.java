@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class ModBlocks {
-    private static final Block SET_VARIABLE_BLOCK = registerModBlock(
+    public static final Block SET_VARIABLE_BLOCK = registerModBlock(
         "set_variable_block",
         AbstractBlock.Settings.create()
             .strength(5.0f)
@@ -35,7 +35,10 @@ public class ModBlocks {
     private static Block registerModBlock(String name, AbstractBlock.Settings blockSettings) {
         Identifier identifier = Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, name);
         RegistryKey<Block> blockRegistryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
-        Block block = new Block(blockSettings.registryKey(blockRegistryKey));
+        Block block = switch (name) {
+            case "set_variable_block" -> new SetVariableBlock(blockSettings.registryKey(blockRegistryKey));
+            default -> new Block(blockSettings.registryKey(blockRegistryKey));
+        };
         registerModBlockItem(name, block);
         return Registry.register(Registries.BLOCK, blockRegistryKey, block);
     }
