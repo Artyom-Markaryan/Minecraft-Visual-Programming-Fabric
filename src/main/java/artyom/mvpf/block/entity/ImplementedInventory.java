@@ -196,7 +196,7 @@ public interface ImplementedInventory extends SidedInventory {
     }
 
     /**
-     * Clears {@linkplain #getItems() the item list}}.
+     * Clears {@linkplain #getItems() the item list}.
      */
     @Override
     default void clear() {
