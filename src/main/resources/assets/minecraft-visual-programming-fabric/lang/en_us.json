@@ -1,8 +1,11 @@
 {
     "item.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
     "item.minecraft-visual-programming-fabric.repeat_block": "Repeat",
+    "item.minecraft-visual-programming-fabric.logger_block": "Logger",
     "block.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
     "block.minecraft-visual-programming-fabric.repeat_block": "Repeat",
+    "block.minecraft-visual-programming-fabric.logger_block": "Logger",
     "container.minecraft-visual-programming-fabric.repeat_block_entity": "Repeat",
-    "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Set Variable"
+    "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Set Variable",
+    "container.minecraft-visual-programming-fabric.logger_block_entity": "Logger"
 }

@@ -1,8 +1,11 @@
 {
     "item.minecraft-visual-programming-fabric.set_variable_block": "Définir Variable",
     "item.minecraft-visual-programming-fabric.repeat_block": "Répéter",
+    "item.minecraft-visual-programming-fabric.logger_block": "Messager",
     "block.minecraft-visual-programming-fabric.set_variable_block": "Définir Variable",
     "block.minecraft-visual-programming-fabric.repeat_block": "Répéter",
+    "block.minecraft-visual-programming-fabric.logger_block": "Messager",
     "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Définir Variable",
-    "container.minecraft-visual-programming-fabric.repeat_block_entity": "Répéter"
+    "container.minecraft-visual-programming-fabric.repeat_block_entity": "Répéter",
+    "container.minecraft-visual-programming-fabric.logger_block_entity": "Messager"
 }

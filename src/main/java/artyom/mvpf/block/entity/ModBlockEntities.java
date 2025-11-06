@@ -19,6 +19,11 @@ public class ModBlockEntities {
         Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, "repeat_block_entity"),
         FabricBlockEntityTypeBuilder.create(RepeatBlockEntity::new, ModBlocks.REPEAT_BLOCK).build()
     );
+    public static final BlockEntityType<LoggerBlockEntity> LOGGER_BLOCK_ENTITY = Registry.register(
+        Registries.BLOCK_ENTITY_TYPE,
+        Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, "logger_block_entity"),
+        FabricBlockEntityTypeBuilder.create(LoggerBlockEntity::new, ModBlocks.LOGGER_BLOCK).build()
+    );
 
     public static void registerModBlockEntities() {
         MinecraftVisualProgrammingFabric.LOGGER.info("Registering Mod Block Entities for " + MinecraftVisualProgrammingFabric.MOD_ID);

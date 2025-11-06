@@ -30,6 +30,13 @@ public class ModBlocks {
             .requiresTool()
             .sounds(BlockSoundGroup.LODESTONE)
     );
+    public static final Block LOGGER_BLOCK = registerModBlock(
+        "logger_block",
+        AbstractBlock.Settings.create()
+            .strength(5.0f)
+            .requiresTool()
+            .sounds(BlockSoundGroup.LODESTONE)
+    );
 
     private static void registerModBlockItem(String name, Block block) {
         Identifier identifier = Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, name);
@@ -45,6 +52,7 @@ public class ModBlocks {
         Block block = switch (name) {
             case "set_variable_block" -> new SetVariableBlock(blockSettings.registryKey(blockRegistryKey));
             case "repeat_block" -> new RepeatBlock(blockSettings.registryKey(blockRegistryKey));
+            case "logger_block" -> new LoggerBlock(blockSettings.registryKey(blockRegistryKey));
             default -> new Block(blockSettings.registryKey(blockRegistryKey));
         };
         registerModBlockItem(name, block);
@@ -57,6 +65,7 @@ public class ModBlocks {
             fabricItemGroupEntries -> {
                 fabricItemGroupEntries.add(SET_VARIABLE_BLOCK);
                 fabricItemGroupEntries.add(REPEAT_BLOCK);
+                fabricItemGroupEntries.add(LOGGER_BLOCK);
             }
         );
     }

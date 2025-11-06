@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+        "front": "minecraft-visual-programming-fabric:block/logger_block_front",
+        "top": "minecraft-visual-programming-fabric:block/logger_block_top",
+        "side": "minecraft-visual-programming-fabric:block/logger_block_side"
+    }
+}
