@@ -14,6 +14,11 @@ public class ModBlockEntities {
         Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, "set_variable_block_entity"),
         FabricBlockEntityTypeBuilder.create(SetVariableBlockEntity::new, ModBlocks.SET_VARIABLE_BLOCK).build()
     );
+    public static final BlockEntityType<RepeatBlockEntity> REPEAT_BLOCK_ENTITY = Registry.register(
+        Registries.BLOCK_ENTITY_TYPE,
+        Identifier.of(MinecraftVisualProgrammingFabric.MOD_ID, "repeat_block_entity"),
+        FabricBlockEntityTypeBuilder.create(RepeatBlockEntity::new, ModBlocks.REPEAT_BLOCK).build()
+    );
 
     public static void registerModBlockEntities() {
         MinecraftVisualProgrammingFabric.LOGGER.info("Registering Mod Block Entities for " + MinecraftVisualProgrammingFabric.MOD_ID);

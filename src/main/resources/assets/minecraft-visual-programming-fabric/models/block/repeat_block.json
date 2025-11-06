@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "minecraft-visual-programming-fabric:block/repeat_block"
+    }
+}

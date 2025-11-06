@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "minecraft-visual-programming-fabric:block/repeat_block"
+        }
+    }
+}

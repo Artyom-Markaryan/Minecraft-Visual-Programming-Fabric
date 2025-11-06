@@ -1,5 +1,8 @@
 {
     "item.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
+    "item.minecraft-visual-programming-fabric.repeat_block": "Repeat",
     "block.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
+    "block.minecraft-visual-programming-fabric.repeat_block": "Repeat",
+    "container.minecraft-visual-programming-fabric.repeat_block_entity": "Repeat",
     "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Set Variable"
 }
