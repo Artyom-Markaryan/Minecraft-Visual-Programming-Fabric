@@ -9,11 +9,16 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 
-public class LoggerBlockEntity extends CodeBlockEntity {
+public class LoggerBlockEntity extends CodeBlockEntity<LoggerBlockEntity.CodeBlockActions> {
     private static final int INVENTORY_SIZE = 9;
+    protected enum CodeBlockActions {
+        INFO,
+        WARNING,
+        ERROR
+    }
 
     public LoggerBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.LOGGER_BLOCK_ENTITY, pos, state, INVENTORY_SIZE);
+        super(ModBlockEntities.LOGGER_BLOCK_ENTITY, pos, state, INVENTORY_SIZE, CodeBlockActions.INFO);
     }
 
     @Override

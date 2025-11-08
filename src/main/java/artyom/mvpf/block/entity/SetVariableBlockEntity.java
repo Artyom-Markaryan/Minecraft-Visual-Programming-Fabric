@@ -8,11 +8,15 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 
-public class SetVariableBlockEntity extends CodeBlockEntity {
+public class SetVariableBlockEntity extends CodeBlockEntity<SetVariableBlockEntity.CodeBlockActions> {
     private static final int INVENTORY_SIZE = 27;
+    protected enum CodeBlockActions {
+        SET,
+        INCREMENT
+    }
 
     public SetVariableBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.SET_VARIABLE_BLOCK_ENTITY, pos, state, INVENTORY_SIZE);
+        super(ModBlockEntities.SET_VARIABLE_BLOCK_ENTITY, pos, state, INVENTORY_SIZE, CodeBlockActions.SET);
     }
 
     @Override

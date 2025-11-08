@@ -9,11 +9,14 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 
-public class RepeatBlockEntity extends CodeBlockEntity {
+public class RepeatBlockEntity extends CodeBlockEntity<RepeatBlockEntity.CodeBlockActions> {
     private static final int INVENTORY_SIZE = 9;
+    protected enum CodeBlockActions {
+        MULTIPLE_TIMES
+    }
 
     public RepeatBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.REPEAT_BLOCK_ENTITY, pos, state, INVENTORY_SIZE);
+        super(ModBlockEntities.REPEAT_BLOCK_ENTITY, pos, state, INVENTORY_SIZE, CodeBlockActions.MULTIPLE_TIMES);
     }
 
     @Override
