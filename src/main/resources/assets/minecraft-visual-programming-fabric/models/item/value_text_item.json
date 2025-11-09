@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "minecraft-visual-programming-fabric:item/value_text_item"
+    }
+}

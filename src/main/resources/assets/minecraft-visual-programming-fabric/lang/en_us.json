@@ -1,4 +1,7 @@
 {
+    "item.minecraft-visual-programming-fabric.variable_item": "Variable",
+    "item.minecraft-visual-programming-fabric.value_text_item": "Value (Text)",
+    "item.minecraft-visual-programming-fabric.value_number_item": "Value (Number)",
     "item.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
     "item.minecraft-visual-programming-fabric.repeat_block": "Repeat",
     "item.minecraft-visual-programming-fabric.logger_block": "Logger",

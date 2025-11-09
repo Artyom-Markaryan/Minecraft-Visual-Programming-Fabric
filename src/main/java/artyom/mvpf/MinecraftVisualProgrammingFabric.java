@@ -2,6 +2,7 @@ package artyom.mvpf;
 
 import artyom.mvpf.block.ModBlocks;
 import artyom.mvpf.block.entity.ModBlockEntities;
+import artyom.mvpf.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,7 @@ public class MinecraftVisualProgrammingFabric implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing " + MOD_ID);
+        ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModBlockEntities.registerModBlockEntities();
 	}
