@@ -10,9 +10,9 @@ import net.minecraft.util.math.BlockPos;
 
 public class SetVariableBlockEntity extends CodeBlockEntity<SetVariableBlockEntity.CodeBlockActions> {
     private static final int INVENTORY_SIZE = 27;
-    protected enum CodeBlockActions {
+    public enum CodeBlockActions {
         SET,
-        INCREMENT
+        ADD_NUMBERS
     }
 
     public SetVariableBlockEntity(BlockPos pos, BlockState state) {

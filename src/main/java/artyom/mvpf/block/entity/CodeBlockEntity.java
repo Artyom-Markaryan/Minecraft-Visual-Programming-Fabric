@@ -77,7 +77,7 @@ public abstract class CodeBlockEntity<A extends Enum<A>> extends BlockEntity imp
             String codeBlockActionName = readView.getString("codeBlockAction", "IllegalArgumentException");
             codeBlockAction = Enum.valueOf(codeBlockAction.getDeclaringClass(), codeBlockActionName);
         } catch (IllegalArgumentException e) {
-            MinecraftVisualProgrammingFabric.LOGGER.error(e.getMessage());
+            MinecraftVisualProgrammingFabric.LOGGER.error("[{}] {}", e.getClass(), e.getMessage());
             codeBlockAction = List.of(codeBlockAction.getDeclaringClass().getEnumConstants()).getFirst();
         }
     }
