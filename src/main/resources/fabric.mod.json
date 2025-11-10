@@ -3,9 +3,9 @@
 	"id": "minecraft-visual-programming-fabric",
 	"version": "${version}",
 	"name": "Minecraft Visual Programming Fabric",
-	"description": "Adds visual programming language to Minecraft",
+	"description": "Adds a visual programming language in the form of Minecraft blocks",
 	"authors": [
-		"Artyom-Markaryan"
+		"LososCroissant"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
