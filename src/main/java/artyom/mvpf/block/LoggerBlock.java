@@ -1,6 +1,8 @@
 package artyom.mvpf.block;
 
+import artyom.mvpf.MinecraftVisualProgrammingFabric;
 import artyom.mvpf.block.entity.LoggerBlockEntity;
+import artyom.mvpf.item.ModItems;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
@@ -8,10 +10,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -54,11 +58,39 @@ public class LoggerBlock extends BlockWithEntity implements BlockEntityProvider 
     @Override
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, WireOrientation wireOrientation, boolean notify) {
         if (!world.isClient()) {
-            if (world.isReceivingRedstonePower(pos)) {
-                for (PlayerEntity player : world.getPlayers()) {
-                    player.sendMessage(Text.literal("§7[§3INFO§7] §bLogger executed"), false);
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (world.isReceivingRedstonePower(pos) && blockEntity instanceof LoggerBlockEntity loggerBlockEntity) {
+                try {
+                    DefaultedList<ItemStack> containerParameters = loggerBlockEntity.getItems();
+
+                    ItemStack valueItem = CodeBlock.getContainerParameter(containerParameters.getFirst(), false);
+                    String value = CodeBlock.getContainerParameterCustomNameString(valueItem.getCustomName());
+
+                    if (valueItem.isOf(ModItems.VARIABLE_ITEM)) value = SetVariableBlock.VARIABLE_DICTIONARY.get(value);
+
+                    LoggerBlockEntity.CodeBlockActions codeBlockAction = loggerBlockEntity.getCodeBlockAction();
+                    if (codeBlockAction.equals(LoggerBlockEntity.CodeBlockActions.INFO))
+                        sendMessage(world, Text.translatable(
+                            "message.minecraft-visual-programming-fabric.logger_block_info", Text.literal("§b" + value)
+                        ));
+                    else if (codeBlockAction.equals(LoggerBlockEntity.CodeBlockActions.WARNING))
+                        sendMessage(world, Text.translatable(
+                            "message.minecraft-visual-programming-fabric.logger_block_warning", Text.literal("§e" + value)
+                        ));
+                    else if (codeBlockAction.equals(LoggerBlockEntity.CodeBlockActions.ERROR))
+                        sendMessage(world, Text.translatable(
+                            "message.minecraft-visual-programming-fabric.logger_block_error", Text.literal("§c" + value)
+                        ));
+                } catch (IllegalArgumentException e) {
+                    MinecraftVisualProgrammingFabric.LOGGER.error("[{}] {}", e.getClass(), e.getMessage());
                 }
             }
+        }
+    }
+
+    private void sendMessage(World world, Text text) {
+        for (PlayerEntity player : world.getPlayers()) {
+            player.sendMessage(text, false);
         }
     }
 }

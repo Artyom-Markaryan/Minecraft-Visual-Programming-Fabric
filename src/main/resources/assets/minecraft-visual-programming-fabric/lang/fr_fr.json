@@ -8,6 +8,9 @@
     "block.minecraft-visual-programming-fabric.set_variable_block": "Définir Variable",
     "block.minecraft-visual-programming-fabric.repeat_block": "Répéter",
     "block.minecraft-visual-programming-fabric.logger_block": "Messager",
+    "message.minecraft-visual-programming-fabric.logger_block_info": "§7[§3INFO§7] %s",
+    "message.minecraft-visual-programming-fabric.logger_block_warning": "§7[§6AVERTISSEMENT§7] %s",
+    "message.minecraft-visual-programming-fabric.logger_block_error": "§7[§4ERREUR§7] %s",
     "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Définir Variable",
     "container.minecraft-visual-programming-fabric.repeat_block_entity": "Répéter",
     "container.minecraft-visual-programming-fabric.logger_block_entity": "Messager"

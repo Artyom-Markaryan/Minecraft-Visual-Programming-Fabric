@@ -55,9 +55,7 @@ public class RepeatBlock extends BlockWithEntity implements BlockEntityProvider 
     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, WireOrientation wireOrientation, boolean notify) {
         if (!world.isClient()) {
             if (world.isReceivingRedstonePower(pos)) {
-                for (PlayerEntity player : world.getPlayers()) {
-                    player.sendMessage(Text.literal("§7[§3INFO§7] §bRepeat executed"), false);
-                }
+
             }
         }
     }

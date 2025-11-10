@@ -8,6 +8,9 @@
     "block.minecraft-visual-programming-fabric.set_variable_block": "Set Variable",
     "block.minecraft-visual-programming-fabric.repeat_block": "Repeat",
     "block.minecraft-visual-programming-fabric.logger_block": "Logger",
+    "message.minecraft-visual-programming-fabric.logger_block_info": "§7[§3INFO§7] %s",
+    "message.minecraft-visual-programming-fabric.logger_block_warning": "§7[§6WARNING§7] %s",
+    "message.minecraft-visual-programming-fabric.logger_block_error": "§7[§4ERROR§7] %s",
     "container.minecraft-visual-programming-fabric.repeat_block_entity": "Repeat",
     "container.minecraft-visual-programming-fabric.set_variable_block_entity": "Set Variable",
     "container.minecraft-visual-programming-fabric.logger_block_entity": "Logger"

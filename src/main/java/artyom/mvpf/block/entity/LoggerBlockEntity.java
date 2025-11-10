@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class LoggerBlockEntity extends CodeBlockEntity<LoggerBlockEntity.CodeBlockActions> {
     private static final int INVENTORY_SIZE = 9;
-    protected enum CodeBlockActions {
+    public enum CodeBlockActions {
         INFO,
         WARNING,
         ERROR
